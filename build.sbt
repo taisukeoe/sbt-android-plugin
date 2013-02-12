@@ -2,7 +2,7 @@ name := "sbt-android-plugin"
 
 organization := "org.scala-sbt"
 
-version := "0.6.3-SNAPSHOT"
+version := "0.6.3.1-SNAPSHOT"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-Xcheckinit", "-Xfatal-warnings")
 
@@ -23,6 +23,8 @@ libraryDependencies ++= Seq(
   "com.google.android.tools" % "ddmlib" % "r10",
   "net.sf.proguard" % "proguard-base" % "4.8"
 )
+
+crossScalaVersions := Seq("2.9.1","2.9.2")
 
 sbtPlugin := true
 
