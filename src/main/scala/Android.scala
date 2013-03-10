@@ -64,9 +64,10 @@ object AndroidProject extends Plugin {
     ) ++ Seq (
       listDevices,
       listDevices in Android,
-      emulatorStart in Android,
       emulatorStop in Android
     ).map {
       aggregate in _ := false
-    }
+    }++Seq(
+      aggregate in (emulatorStart in Android) := false
+    )
 }

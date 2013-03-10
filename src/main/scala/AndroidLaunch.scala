@@ -19,7 +19,7 @@ object AndroidLaunch {
     val launcher = for (
          activity <- (manifest(amPath) \\ "activity");
          action <- (activity \\ "action");
-         val name = action.attribute(schema, "name").getOrElse(sys.error{
+         name = action.attribute(schema, "name").getOrElse(sys.error{
             "action name not defined"
           }).text;
          if name == "android.intent.action.MAIN"

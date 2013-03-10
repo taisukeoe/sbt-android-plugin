@@ -4,7 +4,7 @@ organization := "org.scala-sbt"
 
 version := "0.6.3.1-SNAPSHOT"
 
-scalacOptions ++= Seq("-unchecked", "-deprecation", "-Xcheckinit", "-Xfatal-warnings")
+//scalacOptions ++= Seq("-unchecked", "-deprecation", "-Xcheckinit", "-Xfatal-warnings")
 
 publishMavenStyle := false
 
@@ -24,7 +24,9 @@ libraryDependencies ++= Seq(
   "net.sf.proguard" % "proguard-base" % "4.8"
 )
 
-crossScalaVersions := Seq("2.9.1","2.9.2")
+scalaVersion := "2.10.0"
+
+crossScalaVersions := Seq("2.9.1","2.9.2","2.10.0")
 
 sbtPlugin := true
 

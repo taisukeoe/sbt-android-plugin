@@ -16,7 +16,7 @@ object TypedResources {
         try {
           Some(androidJarLoader.loadClass(className))
         } catch {
-          case _ => None
+          case _:Throwable => None
         }
       }
 
